@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+MIGRATION_TO_SPRING_BOOT.md
