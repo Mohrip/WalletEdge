@@ -34,3 +34,5 @@ build/
 MIGRATION_TO_SPRING_BOOT.md
 docker-compose.yml
 .env
+application.properties
+.application.properties
