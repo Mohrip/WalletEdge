@@ -1,8 +1,12 @@
+### Build artifacts ###
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### STS ###
 .apt_generated
@@ -25,14 +29,99 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
+
+### OS files ###
+.DS_Store
+Thumbs.db
+
+### Editor swap/backup files ###
+*~
+*.swp
+*.swo
+*.bak
+*.orig
+
+### Logs ###
+*.log
+logs/
+
+### Project docs not meant for the repo ###
 MIGRATION_TO_SPRING_BOOT.md
-docker-compose.yml
+
+### Environment files / secrets (real values live only in these, never committed) ###
 .env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.netrc
+
+### Local-only Spring config overrides (the base application.properties stays tracked) ###
+application-local.properties
+application-local.yml
+application-local.yaml
+application-secrets.properties
+application-secrets.yml
+**/src/main/resources/application-local*.properties
+**/src/main/resources/application-local*.yml
+
+### Local-only Docker Compose overrides ###
+docker-compose.override.yml
+docker-compose.override.yaml
+
+### Certificates & key material ###
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+*.ppk
+id_rsa
+id_rsa.pub
+
+### Generic secret-shaped files ###
+*secret*.json
+*secrets*.yml
+*secrets*.yaml
+*credentials*.json
+service-account*.json
+gcp-key.json
+
+### AWS ###
+.aws/
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+### Terraform / IaC (if used later to provision AWS resources) ###
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+### AWS CDK (if used later) ###
+cdk.out/
+cdk.context.json
+
+### Database dumps / backups (NOT Liquibase changelogs — those stay tracked) ###
+*.dump
+*.sql.gz
+dump.sql
+*.backup
+
+### Postman environment exports (often hold live tokens; the collection itself is fine to keep) ###
+*.postman_environment.json
+
+### Currently ignored but still tracked from a prior commit — see note in chat ###
 application.properties
 .application.properties
