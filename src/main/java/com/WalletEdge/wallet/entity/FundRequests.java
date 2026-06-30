@@ -3,7 +3,6 @@ package com.WalletEdge.wallet.entity;
 import com.WalletEdge.shared.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.math.BigDecimal;
 import java.util.UUID;
 
